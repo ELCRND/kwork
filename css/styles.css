@@ -101,23 +101,76 @@ legend {
 }
 
 .header {
+  width: 100%;
+  padding: 20px 0;
   position: absolute;
+  color: var(--White);
+  font-size: 20px;
+  font-weight: 600;
 }
+.header .header__content {
+  display: flex;
+}
+.header .header__logo {
+  color: inherit;
+}
+.header .header__menu {
+  margin-left: 50px;
+  display: flex;
+  position: relative;
+}
+.header .header__menu div:first-of-type {
+  width: 60px;
+  margin-right: 10px;
+  height: 2px;
+  position: relative;
+  left: 0;
+  top: 5px;
+  background-color: var(--White);
+}
+.header .header__menu div:last-of-type {
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  background-color: var(--White);
+}
+.header .header__language {
+  margin-left: auto;
+  margin-right: 20px;
+}
+.header .header__login img {
+  width: 30px;
+  height: 20px;
+}
+.header .header__basket {
+  color: inherit;
+}
+.header .header__basket img {
+  width: 30px;
+  height: 20px;
+}
+.header .header__basket .basket__price {
+  content: attr("data-price");
+}
+
 .hero {
   height: 100vh;
   background-image: url("../img/hero/bg.jpg");
   background-size: cover;
-  filter: brightness(0.8);
 }
 .hero .hero__content {
   align-self: center;
+  margin-top: 170px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 4fr;
+  gap: 100px;
 }
 .hero .hero__content .account {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
   padding: 100px;
   border-radius: 0 200px 0 200px;
 }
@@ -157,6 +210,32 @@ legend {
   color: var(--White);
   letter-spacing: 2px;
   font-weight: 500;
+}
+.hero .hero__content .account .account__form .account__enter {
+  background-color: var(--White);
+  color: var(--Shark);
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.hero .hero__content .hero__subtitle {
+  font-size: 48px;
+  color: var(--White);
+  font-weight: 500;
+}
+.hero .hero__content .hero__title {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  font-size: 68px;
+  color: var(--White);
+  font-weight: 600;
+}
+.hero .hero__content .hero__delevery-btn {
+  padding: 15px 30px;
+  border: 1px solid var(--White);
+  border-radius: 0 50px 50px 50px;
+  font-size: 20px;
+  color: var(--White);
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */

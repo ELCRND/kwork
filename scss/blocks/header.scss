@@ -1,8 +1,56 @@
 .header{
+    width: 100%;
+    padding: 20px 0;
     position: absolute;
-    .header_logo{}
-    .header_menu{}
-    .header_language{}
-    .header_login{}
-    .header_basket{}
+    color: var(--White);
+    font-size: 20px;
+    font-weight: 600;
+    .header__content{
+display: flex;
+    }
+    .header__logo{
+        color: inherit;
+    }
+    .header__menu{
+        margin-left: 50px;
+        display: flex;
+        position: relative;
+        div:first-of-type{
+            width: 60px;
+            margin-right: 10px;
+            height: 2px;
+            position: relative;
+            left: 0;
+            top: 5px;
+            background-color: var(--White);
+        }
+        div:last-of-type{
+            width: 40px;
+            height: 2px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            background-color: var(--White);
+        }
+    }
+    .header__language{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .header__login{
+        img{
+            width: 30px;
+            height: 20px;
+        }
+    }
+    .header__basket{
+        color: inherit;
+        img{
+            width: 30px;
+            height: 20px;
+        }
+        .basket__price{
+            content: attr('data-price');
+        }
+    }
 }

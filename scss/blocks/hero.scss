@@ -2,18 +2,19 @@
     height: 100vh;
     background-image: url('../img/hero/bg.jpg');
     background-size: cover;
-    filter: brightness(0.8);
+    // filter: brightness(0.8);
 
     .hero__content{
         align-self: center;
+        margin-top: 170px;
         margin-left: auto;
         margin-right: auto;
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 3fr 4fr;
+        gap: 100px;
         
         .account{
-            backdrop-filter: blur(20px);
-            // background-color: red;
+            backdrop-filter: blur(15px);
             padding: 100px;
             border-radius: 0 200px 0 200px;
             
@@ -35,17 +36,14 @@
                 .account__enter
                 {
                     padding: 10px;
-                    
                     background-color: #3D3936;
-
                     border: 1px solid #fff;
                     border-radius: 0 15px 0 15px;
                     input{
                         opacity: 1;
                         width: 100%;
                         color: var(--White);
-                        &::placeholder{
-                            
+                        &::placeholder{ 
                             text-align: center;
                             color: var(--White);
                             letter-spacing: 2px;
@@ -54,8 +52,34 @@
                     }
                 }
                 .account__password{}
-                .account__enter{}
+                .account__enter{
+                    background-color: var(--White);
+                    color: var(--Shark);
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                }
             }
+        }
+
+        .hero__subtitle{
+            font-size: 48px;
+            color: var(--White);
+            font-weight: 500;
+        }
+        .hero__title{
+            margin-top: 50px;
+            margin-bottom: 80px;
+            font-size: 68px;
+            color: var(--White);
+            font-weight: 600;
+        }
+        .hero__delevery-btn{
+            padding: 15px 30px;
+            border: 1px solid var(--White);
+            border-radius: 0 50px 50px 50px;
+            font-size: 20px;
+            color: var(--White);
+            text-transform: uppercase;
         }
     }
 }

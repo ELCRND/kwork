@@ -8,15 +8,27 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="#">b2bPlant</a>
-      <button class="header__menu">Меню</button>
-      <select class="header__language" name="" id=""></select>
-      <a class="header__login" href="#">
-        <img src="" alt="login icon" />
-      </a>
-      <a class="header__basket" href="#">
-        <img src="" alt="basket icon" />
-      </a>
+      <div class="container">
+        <div class="header__content">
+          <a class="header__logo" href="#">b2bPlant</a>
+          <button class="header__menu">
+            <div></div>
+            <div></div>
+            Меню
+          </button>
+          <select class="header__language" name="" id="">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+          </select>
+          <a class="header__login" href="#">
+            <img src="img/header/login_icon.svg" alt="login icon" />
+          </a>
+          <a class="header__basket" href="#">
+            <img src="img/header/basket_icon.svg" alt="basket icon" />
+            <span>Корзина: (1800)</span>
+          </a>
+        </div>
+      </div>
     </header>
 
     <div class="hero">
@@ -34,15 +46,14 @@
               <label class="account__password" for="">
                 <input type="password" placeholder="ПАРОЛЬ" />
               </label>
-              <label class="account__enter" for="">
-                <input type="submit" />
-              </label>
+
+              <button class="account__enter" type="submit">ВОЙТИ</button>
             </form>
           </div>
           <div>
-            <span>Работаем с оптом</span>
+            <span class="hero__subtitle">Работаем с оптом</span>
             <h1 class="hero__title">Производитель cеянцев</h1>
-            <a class="hero__delevery-btn" href="#"></a>
+            <a class="hero__delevery-btn" href="#">доставка по всей России</a>
           </div>
         </div>
       </div>
