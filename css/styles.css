@@ -1,0 +1,162 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+:root {
+  --White: #fff;
+  --Shark: #272727;
+}
+
+.container {
+  width: min(100%, 1380px);
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+}
+
+.header {
+  position: absolute;
+}
+.hero {
+  height: 100vh;
+  background-image: url("../img/hero/bg.jpg");
+  background-size: cover;
+  filter: brightness(0.8);
+}
+.hero .hero__content {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.hero .hero__content .account {
+  backdrop-filter: blur(20px);
+  padding: 100px;
+  border-radius: 0 200px 0 200px;
+}
+.hero .hero__content .account span:first-of-type {
+  display: flex;
+  color: var(--White);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+.hero .hero__content .account .account__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero .hero__content .account .account__form .account__login,
+.hero .hero__content .account .account__form .account__password,
+.hero .hero__content .account .account__form .account__enter {
+  padding: 10px;
+  background-color: #3D3936;
+  border: 1px solid #fff;
+  border-radius: 0 15px 0 15px;
+}
+.hero .hero__content .account .account__form .account__login input,
+.hero .hero__content .account .account__form .account__password input,
+.hero .hero__content .account .account__form .account__enter input {
+  opacity: 1;
+  width: 100%;
+  color: var(--White);
+}
+.hero .hero__content .account .account__form .account__login input::placeholder,
+.hero .hero__content .account .account__form .account__password input::placeholder,
+.hero .hero__content .account .account__form .account__enter input::placeholder {
+  text-align: center;
+  color: var(--White);
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=styles.css.map */
