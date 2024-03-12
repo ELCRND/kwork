@@ -1,4 +1,5 @@
 /* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -90,6 +91,10 @@ legend {
   --Shark: #272727;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .container {
   width: min(100%, 1380px);
   height: 100%;
@@ -114,6 +119,9 @@ legend {
 .header .header__logo {
   color: inherit;
 }
+.header .header__logo::before {
+  content: url("../img/header/header_ldogo.png");
+}
 .header .header__menu {
   margin-left: 50px;
   display: flex;
@@ -125,7 +133,7 @@ legend {
   height: 2px;
   position: relative;
   left: 0;
-  top: 5px;
+  top: 10px;
   background-color: var(--White);
 }
 .header .header__menu div:last-of-type {
@@ -133,12 +141,17 @@ legend {
   height: 2px;
   position: absolute;
   left: 20px;
-  top: 15px;
+  top: 18px;
   background-color: var(--White);
 }
 .header .header__language {
   margin-left: auto;
   margin-right: 20px;
+  cursor: pointer;
+}
+.header .header__language option {
+  background-color: var(--Shark);
+  color: var(--White);
 }
 .header .header__login img {
   width: 30px;
@@ -169,10 +182,20 @@ legend {
   grid-template-columns: 3fr 4fr;
   gap: 100px;
 }
+.hero .hero__content::before {
+  width: 45vw;
+  height: 90vh;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  border: 1px solid var(--White);
+  border-radius: 0 40% 0 35%;
+}
 .hero .hero__content .account {
-  backdrop-filter: blur(15px);
-  padding: 100px;
+  padding: 80px;
   border-radius: 0 200px 0 200px;
+  backdrop-filter: blur(15px);
 }
 .hero .hero__content .account span:first-of-type {
   display: flex;
@@ -199,8 +222,8 @@ legend {
 .hero .hero__content .account .account__form .account__login input,
 .hero .hero__content .account .account__form .account__password input,
 .hero .hero__content .account .account__form .account__enter input {
-  opacity: 1;
   width: 100%;
+  padding: 0 20px;
   color: var(--White);
 }
 .hero .hero__content .account .account__form .account__login input::placeholder,
@@ -223,8 +246,8 @@ legend {
   font-weight: 500;
 }
 .hero .hero__content .hero__title {
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   font-size: 68px;
   color: var(--White);
   font-weight: 600;
@@ -236,6 +259,265 @@ legend {
   font-size: 20px;
   color: var(--White);
   text-transform: uppercase;
+}
+
+.about {
+  margin-top: 120px;
+  border-bottom: 1px solid var(--Shark);
+}
+.about .about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+.about .about__title {
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--Shark);
+}
+.about .about__description {
+  margin-bottom: 120px;
+  grid-column: 1/2;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about .about__description p {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--Shark);
+}
+.about .about__image-wrapper {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid var(--Shark);
+  padding: 40px;
+  border-radius: 250px 0 250px 0;
+  position: relative;
+}
+.about .about__image-wrapper::after {
+  content: "";
+  width: 40%;
+  height: 40%;
+  border: 1px solid var(--Shark);
+  border-radius: 120px 0 120px 0;
+  position: absolute;
+  right: -142px;
+  bottom: 10%;
+  z-index: -10;
+}
+.about .about__image {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 220px 0 220px 0;
+  position: relative;
+}
+.about .about__image::after {
+  width: 1000px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+}
+.about .about__more {
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% + 30px);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.about .about__more div:first-of-type::before {
+  content: "";
+  width: 90px;
+  height: 90px;
+  border-style: solid;
+  border-color: var(--Shark);
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+}
+.about .about__more img {
+  width: 50px;
+}
+.about .about__more a {
+  font-size: 20px;
+  text-decoration: underline;
+  color: #5E5E5E;
+}
+
+.examples {
+  padding-bottom: 1000px;
+  position: relative;
+}
+.examples .title-wrapper {
+  margin-top: 120px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.examples .title-wrapper .examples__title {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--White);
+}
+.examples .title-wrapper .examples__title::before {
+  width: 50%;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  content: "";
+  border-radius: 0 50px 50px 0;
+  background-color: var(--Shark);
+  z-index: -10;
+}
+.examples .title-wrapper span:first-of-type {
+  font-size: 38px;
+  color: var(--Shark);
+}
+.examples .examples__content {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 150px;
+}
+.examples .examples__content div:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+}
+.examples .examples__content div:not(:last-child) h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--Shark);
+  font-size: 30px;
+  font-weight: 500;
+}
+.examples .examples__content div:not(:last-child) a {
+  margin-top: 20px;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--Shark);
+}
+.examples .examples__content div:not(:last-child) a::after {
+  content: url("../img/examples/example_details.png");
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.examples .examples__content div:first-child {
+  width: 550px;
+  justify-self: end;
+}
+.examples .examples__content div:first-child img {
+  width: 100%;
+}
+.examples .examples__content div:not(:first-child):not(:last-child) {
+  width: 400px;
+}
+.examples .examples__content div:not(:first-child):not(:last-child) img {
+  width: 100%;
+}
+.examples .examples__content .examples__pinus {
+  position: relative;
+  top: 70%;
+}
+.examples .examples__content .examples__picea {
+  top: 40%;
+}
+.examples .examples__content .examples__larix {
+  position: relative;
+  top: 125%;
+}
+.examples .examples__content .examples__other {
+  position: relative;
+  top: 70%;
+}
+.examples .examples__content .examples__picea,
+.examples .examples__content .examples__other {
+  position: relative;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.examples .examples__catalog {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  top: 140%;
+}
+.examples .examples__catalog img {
+  width: 150px;
+  height: 150px;
+}
+.examples .examples__catalog a {
+  color: var(--Shark);
+  font-weight: 600;
+}
+
+.footer {
+  padding: 0 50px;
+  background-color: var(--Shark);
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 100px;
+  border-top: 1px solid var(--White);
+  border-bottom: 1px solid var(--White);
+}
+.footer .footer__title {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  font-size: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .footer__logo {
+  display: flex;
+  font-size: 50px;
+  color: var(--White);
+}
+.footer .footer__logo::before {
+  content: url("../img/footer/footer_logo.png");
+  position: relative;
+  top: 10px;
+}
+.footer .footer__navigation,
+.footer .footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .footer__navigation a,
+.footer .footer__menu a {
+  color: inherit;
+  text-transform: uppercase;
+}
+.footer .footer__navigation a:hover,
+.footer .footer__menu a:hover {
+  text-decoration: underline;
+}
+.footer .footer__copy {
+  margin: 20px auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

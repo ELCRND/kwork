@@ -1,0 +1,97 @@
+.about{
+    margin-top: 120px;
+    border-bottom: 1px solid var(--Shark);
+    .about__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        position: relative;
+    }
+    .about__title{
+        font-weight: 600;
+        font-size: 48px;
+        color: var(--Shark);
+    }
+    .about__description{
+        margin-bottom: 120px;
+        grid-column: 1 / 2;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p{
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--Shark);
+        }
+    }
+    .about__image-wrapper{
+        width: fit-content;
+        height: fit-content;
+        border: 1px solid var(--Shark);
+        padding: 40px;
+        border-radius: 250px 0 250px 0;
+        position: relative;
+
+        &::after{
+            content: '';
+            width: 40%;
+            height: 40%;
+            border: 1px solid var(--Shark);
+            border-radius: 120px 0 120px 0;
+            position: absolute;
+            right: -142px;
+            bottom: 10%;
+            z-index: -10;
+        }
+    }
+    .about__image{
+        width: fit-content;
+        height: fit-content;
+        overflow: hidden;
+        border-radius: 220px 0 220px 0;
+      
+            position: relative;
+            &::after{
+                width: 1000px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+        
+    }
+    .about__more{
+        position: absolute;
+        bottom: 15px;
+        left: calc(50% + 30px);
+        display: flex; 
+        align-items: center;
+        gap: 50px;
+        div:first-of-type{
+            &::before{
+                content: '';
+                width: 90px;
+                height: 90px;
+                border-style: solid;
+                border-color: var(--Shark);
+                border-top-width: 1px;
+                border-left-width: 1px;
+                border-right-width: 1px ;
+                border-bottom-width: 0;
+                border-radius: 50px 50px 0 0;
+                position: absolute;
+                bottom: -15px;
+                left: -20px;
+            }
+        }
+        img{
+            width: 50px;       
+        }
+        a{
+            font-size: 20px;
+            text-decoration: underline;
+            color: #5E5E5E;
+        }
+    }
+}
