@@ -1,24 +1,36 @@
 .header{
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     position: absolute;
     color: var(--White);
     font-size: 20px;
     font-weight: 600;
+    z-index: 100;
     .header__content{
     display: flex;
+    align-items: center;
     }
     .header__logo{
+        display: flex;
+        align-items: center;
+        font-family: "Protest Riot", sans-serif;
+        font-size: 28px;
         color: inherit;
         &::before{
-            content: url('../img/header/header_ldogo.png');
+            content: url('../img/header/header_logo.png');
+            transform: scale(1.2);
+            position: relative;
+            left: 10px;
+            top: 12px;
         }
     }
     .header__menu{
         margin-left: 50px;
         display: flex;
         position: relative;
-        div:first-of-type{
+        cursor: pointer;
+
+        span:first-of-type{
             width: 60px;
             margin-right: 10px;
             height: 2px;
@@ -27,7 +39,7 @@
             top: 10px;
             background-color: var(--White);
         }
-        div:last-of-type{
+        span:last-of-type{
             width: 40px;
             height: 2px;
             position: absolute;
@@ -45,20 +57,15 @@
             color: var(--White);
         }
     }
-    .header__login{
-        img{
-            width: 30px;
-            height: 20px;
-        }
-    }
+    .header__login,
     .header__basket{
+        display: flex;
+        align-items: center;
         color: inherit;
         img{
             width: 30px;
             height: 20px;
         }
-        .basket__price{
-            content: attr('data-price');
-        }
     }
+    
 }
