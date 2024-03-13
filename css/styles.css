@@ -179,6 +179,11 @@ body {
 .header .header__basket img {
   width: 30px;
   height: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.header .header__login img:hover,
+.header .header__basket img:hover {
+  scale: 1.1;
 }
 
 .hero {
