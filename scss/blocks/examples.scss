@@ -55,9 +55,12 @@
         font-weight: 600;
         color: var(--Shark);
         &::after {
-          content: url("../img/examples/example_details.png");
-          width: 30px;
-          height: 30px;
+          content: "";
+          background-image: url("../img/examples/example_details.svg");
+          background-size: contain;
+          rotate: 45deg;
+          width: 40px;
+          height: 40px;
           margin-left: 10px;
           overflow: hidden;
           border-radius: 50%;
